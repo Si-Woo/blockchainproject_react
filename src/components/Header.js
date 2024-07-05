@@ -22,11 +22,11 @@ const Header = () => {
 
   return (
     <Box as="header" color="white">
-      <Flex justify="space-between" align="center" maxW="container.xl" mx="auto" px={4}>
+      <Flex justify="space-between" align="center" maxW="container.xl" mx="auto" px={5}>
         <Link as={RouterLink} to="/" onClick={onClose}>
           <Image src={require("../images/logo.png")} width={200} />
         </Link>
-        <Flex display={{ base: 'none', md: 'flex' }}>
+        <Flex fontSize={20} display={{ base: 'none', md: 'flex' }}>
           <Link as={RouterLink} to="/" mx={2}>
             홈
           </Link>
@@ -51,15 +51,15 @@ const Header = () => {
             <Flex align="center" bg="#1e242f" p={2}>
               <Image src={require("../images/logo.png")} alt="Drawer Icon" width={200} marginLeft={3} />
             </Flex>
-            <Box bg="orange.500" height="3px" width="100%" />
+            <Box bg="#ec6437" height="3px" width="100%" />
             <DrawerBody>
-              <Link as={RouterLink} to="/" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
+              <Link color="black" as={RouterLink} to="/" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
                 홈
               </Link>
-              <Link as={RouterLink} to="/members" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
+              <Link color="black" as={RouterLink} to="/members" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
                 멤버
               </Link>
-              <Link as={RouterLink} to="/donation" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
+              <Link color="black" as={RouterLink} to="/donation" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
                 도네이션
               </Link>
             </DrawerBody>
@@ -67,7 +67,7 @@ const Header = () => {
         </DrawerOverlay>
       </Drawer>
 
-      <Box bg="orange.500" height="3px" width="100%" mt={1} />
+      <Box bg="#ec6437" height="3px" width="100%" mt={1} />
     </Box>
   );
 };

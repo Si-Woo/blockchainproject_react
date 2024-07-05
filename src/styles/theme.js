@@ -14,7 +14,9 @@ const extendColors = {
         900: '#003f5e',
     },
     background: {
-        10: '#1e242f',
+        100: '#1e242f',
+        200: '#c8d9df',
+        300: '#ec6437',
     }
 };
 
