@@ -14,12 +14,23 @@ import {
   Link,
   Image,
   Text,
+  Button,
+  HStack,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    localStorage.setItem('language', lng); // store the selected language in local storage
+  };
+
 
   return (
     <Box as="header" color="white">
@@ -46,18 +57,16 @@ const Header = () => {
         />
       </Flex>
       <Flex justify="end" fontSize={15} marginRight={5} display={{ base: 'none', md: 'flex' }}>
-          <Link as={RouterLink} to="/" mx={2}>
-            한국어
-          </Link>
-          <Text>|</Text>
-          <Link as={RouterLink} to="/en" mx={2}>
-            ENG
-          </Link>
-          {/* <Text>|</Text>
+        {
+          i18n.language === 'en' ?
+          (<button onClick={() => changeLanguage('kr')}>{t('korean')}</button>) : 
+          (<button  onClick={() => changeLanguage('en')}>{t('english')}</button>)
+        }
+        {/* <Text>|</Text>
           <Link as={RouterLink} to="/donation" mx={2}>
             일본어
           </Link> */}
-        </Flex>
+      </Flex>
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay>
           <DrawerContent>

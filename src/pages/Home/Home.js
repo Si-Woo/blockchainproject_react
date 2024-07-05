@@ -3,7 +3,10 @@ import { Box, Button, HStack, Text, VStack } from '@chakra-ui/react';
 import { CustomButtonRedHover, CustomButtonOutline } from '../../components/CustomeButton';
 
 import { ColorModeSwitcher } from '../../components/ColorModeSwitcher';
+import { useTranslation } from 'react-i18next';
+
 const Home = () => {
+  const { t } = useTranslation();
 
   const handleClick = () => {
     console.log('handleClick');
@@ -17,7 +20,7 @@ const Home = () => {
     
       <Box w="100%" maxW="container.xl" mx="auto" p={4}>
         <Text fontSize="xl" color="white" mb={4}>
-          홈 페이지
+          {t('homepageTitle')}
         </Text>
         <VStack spacing={4} align="stretch">
           {/* button example */}
@@ -41,3 +44,6 @@ const Home = () => {
 };
 
 export default Home;
+
+
+
