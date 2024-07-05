@@ -17,6 +17,7 @@
     "3. 보낼 토큰 금액을 입력하고 '다음'을 클릭하십시오.": "3. Enter the amount of tokens you want to send and click next.",
     "4. 이제 거래의 예상 가스 요금이 표시되며, 이 요금은 조정할 수 있습니다. '확인'을 클릭하여 거래를 진행하기 전에 수신자 주소를 다시 확인하는 것이 좋습니다.": "4. Now you're presented with the estimated gas fees of your transaction, which you can also adjust. Double-checking the recipient address before clicking 'Confirm' to proceed with the transaction is generally a good idea.",
     "5. 그러면 '작업' 탭에서 최근 거래 목록을 볼 수 있는 메인 페이지로 리디렉션됩니다.": "5. You will then be redirected to the homepage, where you can see a list of your recent transactions on the 'Activity' tab.",
+    
     "모바일": "Mobile",
     "1. 계정 페이지로 이동하십시오. 여기서 '전송' 버튼을 누르십시오.": "1. From anywhere in MetaMask, click the wallet actions button in the middle of the tab bar. From here, tap the'send' button.",
     "또한 홈페이지의 '자산' 탭에 표시된 토큰 자체를 클릭하여 토큰을 보낼 수도 있습니다.": "",
