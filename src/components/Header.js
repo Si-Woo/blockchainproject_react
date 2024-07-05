@@ -16,6 +16,7 @@ import {
   Text,
   Button,
   HStack,
+  VStack,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
@@ -34,20 +35,31 @@ const Header = () => {
 
   return (
     <Box as="header" color="white">
-      <Flex justify="space-between" align="center" maxW="container.xl" mx="auto" px={5} mb={-6}>
+      <Flex justify="space-between" align="center" maxW="container.xl" mx="auto" px={5} mb={-1}>
         <Link as={RouterLink} to="/" onClick={onClose}>
           <Image src={require("../images/logo.png")} width={200} />
         </Link>
         <Flex fontSize={20} fontWeight="bold" display={{ base: 'none', md: 'flex' }}>
-          <Link as={RouterLink} to="/" mx={2}>
-          {t('홈')}
-          </Link>
-          <Link as={RouterLink} fontWeight="bold" to="/members" mx={2}>
-          {t('멤버')}
-          </Link>
-          <Link as={RouterLink} fontWeight="bold" to="/donation" mx={2}>
-          {t('도네이션')}
-          </Link>
+          <VStack align="end" marginTop={7}>
+            <HStack>
+              <Link as={RouterLink} to="/" mx={2}>
+                {t('홈')}
+              </Link>
+              <Link as={RouterLink} fontWeight="bold" to="/members" mx={2}>
+                {t('멤버')}
+              </Link>
+              <Link as={RouterLink} fontWeight="bold" to="/donation" mx={2}>
+                {t('도네이션')}
+              </Link>
+            </HStack>
+            <Flex justify="end" fontSize={15} marginRight={2} marginTop={1}>
+              {
+                i18n.language === 'en' ?
+                  (<button onClick={() => changeLanguage('kr')} style={{ fontSize: '15px', textAlign: 'end' }}>{t('한국어')}</button>) :
+                  (<button onClick={() => changeLanguage('en')} style={{ fontSize: '15px', textAlign: 'end' }}>{t('english')}</button>)
+              }
+            </Flex>
+          </VStack>
         </Flex>
         <IconButton
           aria-label="Open Menu"
@@ -56,17 +68,7 @@ const Header = () => {
           onClick={onOpen}
         />
       </Flex>
-      <Flex justify="end" fontSize={15} marginRight={5} display={{ base: 'none', md: 'flex' }}>
-        {
-          i18n.language === 'en' ?
-          (<button onClick={() => changeLanguage('kr')}>{t('korean')}</button>) : 
-          (<button  onClick={() => changeLanguage('en')}>{t('english')}</button>)
-        }
-        {/* <Text>|</Text>
-          <Link as={RouterLink} to="/donation" mx={2}>
-            일본어
-          </Link> */}
-      </Flex>
+     
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay>
           <DrawerContent>
