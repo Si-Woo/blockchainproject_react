@@ -12,7 +12,8 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Link,
-  Image
+  Image,
+  Text,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
@@ -22,18 +23,18 @@ const Header = () => {
 
   return (
     <Box as="header" color="white">
-      <Flex justify="space-between" align="center" maxW="container.xl" mx="auto" px={5}>
+      <Flex justify="space-between" align="center" maxW="container.xl" mx="auto" px={5} mb={-6}>
         <Link as={RouterLink} to="/" onClick={onClose}>
           <Image src={require("../images/logo.png")} width={200} />
         </Link>
-        <Flex fontSize={20} display={{ base: 'none', md: 'flex' }}>
+        <Flex fontSize={20} fontWeight="bold" display={{ base: 'none', md: 'flex' }}>
           <Link as={RouterLink} to="/" mx={2}>
             홈
           </Link>
-          <Link as={RouterLink} to="/members" mx={2}>
+          <Link as={RouterLink} fontWeight="bold" to="/members" mx={2}>
             멤버
           </Link>
-          <Link as={RouterLink} to="/donation" mx={2}>
+          <Link as={RouterLink} fontWeight="bold" to="/donation" mx={2}>
             도네이션
           </Link>
         </Flex>
@@ -44,6 +45,19 @@ const Header = () => {
           onClick={onOpen}
         />
       </Flex>
+      <Flex justify="end" fontSize={15} marginRight={5} display={{ base: 'none', md: 'flex' }}>
+          <Link as={RouterLink} to="/" mx={2}>
+            한국어
+          </Link>
+          <Text>|</Text>
+          <Link as={RouterLink} to="/en" mx={2}>
+            ENG
+          </Link>
+          {/* <Text>|</Text>
+          <Link as={RouterLink} to="/donation" mx={2}>
+            일본어
+          </Link> */}
+        </Flex>
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay>
           <DrawerContent>

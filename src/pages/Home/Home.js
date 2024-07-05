@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box, Button, HStack, Text, VStack } from '@chakra-ui/react';
-import { CustomButtonRedHover, CustomButtonOutline } from '../components/CustomeButton';
+import { CustomButtonRedHover, CustomButtonOutline } from '../../components/CustomeButton';
 
-import { ColorModeSwitcher } from '../components/ColorModeSwitcher';
+import { ColorModeSwitcher } from '../../components/ColorModeSwitcher';
 const Home = () => {
 
   const handleClick = () => {
@@ -17,7 +17,7 @@ const Home = () => {
     
       <Box w="100%" maxW="container.xl" mx="auto" p={4}>
         <Text fontSize="xl" color="white" mb={4}>
-          Home Page
+          홈 페이지
         </Text>
         <VStack spacing={4} align="stretch">
           {/* button example */}
