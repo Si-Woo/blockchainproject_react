@@ -40,13 +40,13 @@ const Header = () => {
         </Link>
         <Flex fontSize={20} fontWeight="bold" display={{ base: 'none', md: 'flex' }}>
           <Link as={RouterLink} to="/" mx={2}>
-            홈
+          {t('홈')}
           </Link>
           <Link as={RouterLink} fontWeight="bold" to="/members" mx={2}>
-            멤버
+          {t('멤버')}
           </Link>
           <Link as={RouterLink} fontWeight="bold" to="/donation" mx={2}>
-            도네이션
+          {t('도네이션')}
           </Link>
         </Flex>
         <IconButton
