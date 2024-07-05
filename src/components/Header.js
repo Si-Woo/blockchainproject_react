@@ -40,7 +40,7 @@ const Header = () => {
           <Image src={require("../images/logo.png")} width={200} />
         </Link>
         <Flex fontSize={20} fontWeight="bold" display={{ base: 'none', md: 'flex' }}>
-          <VStack align="end" marginTop={7}>
+          <VStack marginTop={6} align="end">
             <HStack>
               <Link as={RouterLink} to="/" mx={2}>
                 {t('홈')}
@@ -52,12 +52,12 @@ const Header = () => {
                 {t('도네이션')}
               </Link>
             </HStack>
-            <Flex justify="end" fontSize={15} marginRight={2} marginTop={1}>
-              {
-                i18n.language === 'en' ?
-                  (<button onClick={() => changeLanguage('kr')} style={{ fontSize: '15px', textAlign: 'end' }}>{t('한국어')}</button>) :
-                  (<button onClick={() => changeLanguage('en')} style={{ fontSize: '15px', textAlign: 'end' }}>{t('english')}</button>)
-              }
+            <Flex justify="end" fontSize={15} marginRight={2}>
+            {
+          i18n.language === 'en' ?
+            (<button onClick={() => changeLanguage('kr')}>{t('한국어')}</button>) :
+            (<button onClick={() => changeLanguage('en')}>{t('english')}</button>)
+        }
             </Flex>
           </VStack>
         </Flex>
@@ -68,7 +68,7 @@ const Header = () => {
           onClick={onOpen}
         />
       </Flex>
-     
+      
       <Drawer isOpen={isOpen} placement="left" onClose={onClose}>
         <DrawerOverlay>
           <DrawerContent>
