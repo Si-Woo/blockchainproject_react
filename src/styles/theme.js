@@ -1,4 +1,4 @@
-import { background, extendTheme, withDefaultColorScheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
 
 const extendColors = {
     brand: {
@@ -23,10 +23,10 @@ const extendColors = {
 
 
 // Call `extendTheme` and pass your custom values
-const config = {
-    initialColorMode: 'light',
-    useSystemColorMode: false,
-}
+// const config = {
+//     initialColorMode: 'light',
+//     useSystemColorMode: false,
+// }
 
 // const CustomButton = {
 //     baseStyle: {
@@ -49,24 +49,24 @@ const config = {
 //     },
 // };
 
-const theme = extendTheme({
-    styles: {
-      global: {
-        // styles for the `body`
-        body: {
-          bg: '#1e242f',
-          color: '#c8d9df',
-        },
-        // styles for the `a`
-        a: {
-          color: 'teal.500',
-          _hover: {
-            textDecoration: 'underline',
-          },
-        },
-      },
-    },
-  })
+// const theme = extendTheme({
+//     styles: {
+//       global: {
+//         // styles for the `body`
+//         body: {
+//           bg: '#1e242f',
+//           color: '#c8d9df',
+//         },
+//         // styles for the `a`
+//         a: {
+//           color: 'teal.500',
+//           _hover: {
+//             textDecoration: 'underline',
+//           },
+//         },
+//       },
+//     },
+//   })
 
 //   const theme = extendTheme(
 //     {

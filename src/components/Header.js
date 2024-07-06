@@ -2,12 +2,10 @@ import React from 'react';
 import {
   Box,
   Flex,
-  Heading,
   IconButton,
   useDisclosure,
   Drawer,
   DrawerBody,
-  DrawerHeader,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
