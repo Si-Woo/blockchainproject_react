@@ -31,7 +31,7 @@ jobs:
 
       - name: Deploy
         env:
-          GITHUB_TOKEN: ${{ secrets.MY_SECRET_KEY }}
+          GITHUB_TOKEN: ${{ secrets.PLANETCHAIN_KEY }}
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.MY_SECRET_KEY }}@github.com/${{ github.repository }}
+          git remote set-url origin https://x-access-token:${{ secrets.PLANETCHAIN_KEY }}@github.com/${{ github.repository }}
           npm run deploy
