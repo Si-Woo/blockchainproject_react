@@ -13,8 +13,6 @@ import {
   DrawerCloseButton,
   Link,
   Image,
-  Text,
-  Button,
   HStack,
   VStack,
 } from '@chakra-ui/react';
