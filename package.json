@@ -1,5 +1,5 @@
 {
-  "name": "website-sample",
+  "name": "blockchainproject_react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +20,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://zkdltidchan.github.io/website-sample",
+  "homepage": "https://si-woo.github.io/blockchainproject_react",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
