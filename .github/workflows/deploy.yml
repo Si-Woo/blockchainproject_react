@@ -33,5 +33,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.PLANETCHAIN_KEY }}
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.PLANETCHAIN_KEY }}@github.com/${{ github.repository }}
+          git remote set-url origin https://x-access-token:${{ secrets.PLANETCHAIN_KEY }}@github.com/${{ blockchainproject_react }}
           npm run deploy
