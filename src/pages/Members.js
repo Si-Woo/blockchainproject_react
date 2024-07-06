@@ -17,30 +17,29 @@ const Members = () => {
   };
 
   return (
-    
-      <Box w="100%" maxW="container.xl" mx="auto" marginLeft={6}>
-        <Text fontSize={22} fontWeight="bold" color="white" mb={4}>
-          {t("멤버")}
-        </Text>
-        <VStack spacing={4} align="center">
-        <Image src={require("../images/shu.png")} alt="image1" height={100} mx="auto" />
-        <Text>이시우</Text>
-          {/* button example */}
-          <HStack spacing={4} wrap="wrap">
-            <Button onClick={() => alert('0')}>Chakra Button With Default colorScheme</Button>
-            <Button colorScheme="teal" onClick={() => console.log('1')}>Chakra Button 1</Button>
-            <Button colorScheme="red" onClick={handleClick}>Chakra Button 2</Button>
-            <Button colorScheme="teal" onClick={() => handleClick2({ event: 'test' })} variant="ghost">Chakra Button 3</Button>
-            <Button colorScheme="teal" variant="link">Chakra Button 4</Button>
-          </HStack>
-          {/* custome button example */}
-          <HStack spacing={4} wrap="wrap">
-            <CustomButtonRedHover>Custom Button</CustomButtonRedHover>
-            <CustomButtonOutline>Custom Button 2</CustomButtonOutline>
-            <CustomButtonOutline size="sm">Custom Button 3</CustomButtonOutline>
-            <ColorModeSwitcher />
-          </HStack>
-        </VStack>
+
+    <Box w="100%" maxW="container.xl" mx="auto" marginLeft={6}>
+     <Text fontSize={22} fontWeight="bold" color="white" mb={4} align="center">
+        {t("멤버")}
+      </Text>
+       <VStack spacing={4} alignItems="center"> {/* 세로 방향으로 중앙 정렬 */}
+        {/* 첫 번째 이미지 왼쪽 정렬 */}
+        <Box textAlign="left" width="100%" marginLeft={-20}> {/* 수평으로 요소를 정렬하기 위한 HStack */}
+          <Box width="50%" float="left" align="center"> {/* 왼쪽 이미지 박스 */}
+            <Image src={require("../images/shu.png")} alt="image1" height={100} mx="auto" />
+            <Text>{t("이시우")}</Text>
+          </Box>
+        </Box>
+        {/* 두 번째 이미지 오른쪽 정렬 */}
+        <Box textAlign="right" width="100%"> {/* 수평으로 요소를 정렬하기 위한 HStack */}
+          <Box width="50%" float="right" textAlign="center"> {/* 오른쪽 이미지 박스 */}
+            <Image src={require("../images/zkdltid.jpg")} alt="image2" height={100} mx="auto" />
+            <Text>{t("챈 카이샹")}</Text>
+          </Box>
+        </Box>
+        {/* button example */}
+        
+      </VStack>
     </Box>
   );
 };

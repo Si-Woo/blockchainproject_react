@@ -63,9 +63,13 @@ const Header = () => {
         </Flex>
         <IconButton
           aria-label="Open Menu"
-          icon={<HamburgerIcon />}
+          bg= "#1e242f"
+          borderColor="#ec6437"
+          borderWidth="2px"
+          icon={<HamburgerIcon color='#c8d9df' />}
           display={{ base: 'flex', md: 'none' }}
           onClick={onOpen}
+          
         />
       </Flex>
       
