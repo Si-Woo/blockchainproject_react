@@ -1,12 +1,9 @@
 import React from 'react';
-import { Box, Button, HStack, Text, VStack, Image } from '@chakra-ui/react';
+import { Box, Button, HStack, Text, VStack } from '@chakra-ui/react';
 import { CustomButtonRedHover, CustomButtonOutline } from '../components/CustomeButton';
 
 import { ColorModeSwitcher } from '../components/ColorModeSwitcher';
-import { useTranslation } from 'react-i18next';
-
-const Members = () => {
-  const { t } = useTranslation();
+const Test = () => {
 
   const handleClick = () => {
     console.log('handleClick');
@@ -18,13 +15,11 @@ const Members = () => {
 
   return (
     
-      <Box w="100%" maxW="container.xl" mx="auto" marginLeft={6}>
-        <Text fontSize={22} fontWeight="bold" color="white" mb={4}>
-          {t("멤버")}
+      <Box w="100%" maxW="container.xl" mx="auto" p={4}>
+        <Text fontSize="xl" color="white" mb={4}>
+          Test Page
         </Text>
-        <VStack spacing={4} align="center">
-        <Image src={require("../images/shu.png")} alt="image1" height={100} mx="auto" />
-        <Text>이시우</Text>
+        <VStack spacing={4} align="stretch">
           {/* button example */}
           <HStack spacing={4} wrap="wrap">
             <Button onClick={() => alert('0')}>Chakra Button With Default colorScheme</Button>
@@ -45,4 +40,4 @@ const Members = () => {
   );
 };
 
-export default Members;
+export default Test;

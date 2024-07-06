@@ -28,7 +28,7 @@ const Home = () => {
           objectFit="contain"
         />
       </Box>
-      <Text fontSize={22} color="white" mb={100} marginLeft={10} marginRight={10}>
+      <Text fontSize={22} color="white" mb={100} marginLeft={10} marginRight={10} textAlign="start">
         <p>{t("BlockChain Project는 혁신성과 잠재력으로 우리의 세상을 변화시키고 있는 블록체인 기술을 통해 더 나은 세상을 만들고자 합니다.")}</p>
         <p>{t("투명성, 신뢰성, 그리고 탈중앙화된 시스템을 기반으로 한 블록체인 기술이 다양한 산업에서 변화를 이끌어 낼 수 있다고 믿습니다.")}</p>
         <br />

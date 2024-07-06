@@ -37,7 +37,7 @@ const Header = () => {
     <Box as="header" color="white">
       <Flex justify="space-between" align="center" maxW="container.xl" mx="auto" px={5} mb={-1}>
         <Link as={RouterLink} to="/" onClick={onClose}>
-          <Image src={require("../images/logo.png")} width={200} />
+          <Image src={require("../images/logo.png")} width={200}  />
         </Link>
         <Flex fontSize={20} fontWeight="bold" display={{ base: 'none', md: 'flex' }}>
           <VStack marginTop={6} align="end">
