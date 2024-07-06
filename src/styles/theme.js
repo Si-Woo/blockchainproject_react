@@ -49,24 +49,24 @@ const extendColors = {
 //     },
 // };
 
-// const theme = extendTheme({
-//     styles: {
-//       global: {
-//         // styles for the `body`
-//         body: {
-//           bg: '#1e242f',
-//           color: '#c8d9df',
-//         },
-//         // styles for the `a`
-//         a: {
-//           color: 'teal.500',
-//           _hover: {
-//             textDecoration: 'underline',
-//           },
-//         },
-//       },
-//     },
-//   })
+const theme = extendTheme({
+    styles: {
+      global: {
+        // styles for the `body`
+        body: {
+          bg: '#1e242f',
+          color: '#c8d9df',
+        },
+        // styles for the `a`
+        // a: {
+        //   color: 'teal.500',
+        //   _hover: {
+        //     textDecoration: 'underline',
+        //   },
+        // },
+      },
+    },
+  })
 
 //   const theme = extendTheme(
 //     {
