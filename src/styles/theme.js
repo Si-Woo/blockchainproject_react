@@ -58,12 +58,12 @@ const theme = extendTheme({
           color: '#c8d9df',
         },
         // styles for the `a`
-        // a: {
-        //   color: 'teal.500',
-        //   _hover: {
-        //     textDecoration: 'underline',
-        //   },
-        // },
+        a: {
+          color: 'teal.500',
+          _hover: {
+            textDecoration: 'underline',
+          },
+        },
       },
     },
   })
