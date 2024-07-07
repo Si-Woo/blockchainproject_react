@@ -15,7 +15,7 @@ import NotFound from './pages/NotFound';
 
 function RouterContainer() {
   return (
-    <Router basename="/website-sample">
+    <Router basename="/blockchainproject_react">
       <Box display="flex" flexDirection="column" minHeight="100vh">
         <Header />
         <Box as="main" flex="1" py={8}>
