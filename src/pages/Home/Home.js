@@ -18,7 +18,7 @@ const Home = () => {
 
   return (
 
-    <Box w="100%" maxW="container.xl" mx="auto" textAlign="center" marginTop={-20}>
+    <Box w="100%" maxW="container.xl" mx="auto" textAlign="center">
       <Box marginLeft={10} marginRight={10}>
         <Image
           src={require("../../images/logo.png")}

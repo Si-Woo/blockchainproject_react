@@ -55,7 +55,8 @@ const theme = extendTheme({
         // styles for the `body`
         body: {
           bg: '#1e242f',
-          color: '#c8d9df',
+          textColor: '#c8d9df',
+          orangeColor: '#ec6437'
         },
         // styles for the `a`
         a: {

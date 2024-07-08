@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Home from './pages/Home/Home';
 import Members from './pages/Members';
 import Donation from './pages/Donation/Donation';
+import AboutUs from './pages/AboutUs/AboutUs';
 import NotFound from './pages/NotFound';
 
 function RouterContainer() {
@@ -23,6 +24,7 @@ function RouterContainer() {
             <Route path="/" element={<Home />} />
             <Route path="/members" element={<Members />} />
             <Route path="/donation" element={<Donation />} />
+            <Route path="/about_us" element={<AboutUs />} />
             <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
           </Routes>
         </Box>

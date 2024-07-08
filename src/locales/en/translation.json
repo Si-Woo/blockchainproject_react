@@ -6,8 +6,23 @@
     "homepageTitle": "Home Page",
     "homepageContent": "Here is some content in English.",
     "홈": "Home",
+    "소개": "About Us",
     "멤버": "Memebers",
     "도네이션": "Donation",
+
+    "우리의 이야기": "Our Story",
+    "저희는 각자의 분야에서 개발자로 있으며 각기 다른 전문 분야에서 경험을 쌓아온 사람들로 이루어진 팀입니다. 블록체인 기술에 대한 열정과 호기심을 바탕으로, 취미로 블록체인 프로젝트를 선정하여 개발하는 커뮤니티를 운영하고 있습니다.": "We are a team of developers working in various fields, each with experience in different specialized areas. With a passion for and curiosity about blockchain technology, we run a community that selects and develops blockchain projects as a hobby.",
+    "우리의 목표": "Our Goals",
+    "블록체인 기술의 잠재력과 가능성에 매료된 우리는, 이 혁신적인 기술을 활용하여 더 나은 세상을 만들고자 합니다. 다양한 아이디어를 바탕으로 프로젝트를 선정하고, 각자의 전문 지식과 경험을 살려 실제로 구현해나가는 과정을 통해 블록체인 기술을 더 깊이 이해하고, 더 많은 사람들과 그 가치를 공유하고자 합니다.": "Fascinated by the potential and possibilities of blockchain technology, we aim to harness this innovative technology to create a better world. By selecting projects based on diverse ideas and leveraging our individual expertise and experience, we seek to deepen our understanding of blockchain technology and share its value with more people.",
+    "우리의 가치": "Our Values",
+    "우리는 블록체인 기술이 단순한 유행을 넘어, 투명성과 신뢰성을 제공하고 다양한 산업에 혁신을 가져올 수 있는 중요한 도구라고 믿습니다. 우리의 프로젝트를 통해 이러한 가치를 널리 알리고, 더 많은 사람들이 블록체인 기술의 혜택을 누릴 수 있도록 하는 것이 우리의 목표입니다.": "We believe that blockchain technology is more than just a trend; it is a crucial tool that provides transparency and reliability, bringing innovation to various industries. Our goal is to promote these values through our projects and enable more people to benefit from blockchain technology.",
+    "연락처": "Contact",
+    "저희 프로젝트에 관심을 가져주셔서 감사합니다. 더 자세한 정보나 협업 문의는 아래 연락처로 언제든지 연락해 주세요.": "Thank you for your interest in our project. For more information or collaboration inquiries, please feel free to contact us at the following:",
+    "이메일": "Email",
+
+
+
+
 
     "이시우": "SiWoo Lee",
     "챈 카이샹": "Kaihsang Chan",

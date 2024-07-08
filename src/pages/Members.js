@@ -38,7 +38,6 @@ const Members = () => {
           </Box>
         </HStack>
         {/* button example */}
-        
       </VStack>
     </Box>
   );
