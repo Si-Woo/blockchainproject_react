@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Image, HStack } from '@chakra-ui/react';
+import { Box, Text, HStack } from '@chakra-ui/react';
 
 import { useTranslation } from 'react-i18next';
 
