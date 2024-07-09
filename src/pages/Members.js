@@ -56,13 +56,13 @@ const Members = () => {
                   <Flex direction="column" alignItems="center">
                     <Box textAlign="start">
                       <Grid templateColumns="100px 1fr" gap={2}>
-                        <Text>최종학력:</Text>
-                        <Text>공학석사</Text>
-                        <Text>전문분야:</Text>
-                        <Text>풀스택(앱)</Text>
-                        <Text>사용언어:</Text>
+                        <Text>{t("학력") + ":"}</Text>
+                        <Text>{t("공학석사")}</Text>
+                        <Text>{t("전문분야") + ":"}</Text>
+                        <Text>{t("풀스택(앱)")}</Text>
+                        <Text>{t("사용언어") + ":"}</Text>
                         <Text>Go, Dart, Python</Text>
-                        <Text>프레임워크:</Text>
+                        <Text>{t("프레임워크") + ":"}</Text>
                         <Text>Flutter</Text>
                       </Grid>
                     </Box>
@@ -91,13 +91,13 @@ const Members = () => {
                   <Flex direction="column" alignItems="center">
                     <Box textAlign="start">
                       <Grid templateColumns="100px 1fr" gap={2}>
-                        <Text>최종학력:</Text>
-                        <Text>공학석사</Text>
-                        <Text>전문분야:</Text>
-                        <Text>풀스택(웹)</Text>
-                        <Text>사용언어:</Text>
+                        <Text>{t("학력") + ":"}</Text>
+                        <Text>{t("공학석사")}</Text>
+                        <Text>{t("전문분야") + ":"}</Text>
+                        <Text>{t("풀스택(웹)")}</Text>
+                        <Text>{t("사용언어") + ":"}</Text>
                         <Text>Go, JavaScript,<br />Python</Text>
-                        <Text>프레임워크:</Text>
+                        <Text>{t("프레임워크") + ":"}</Text>
                         <Text>React</Text>
                       </Grid>
                     </Box>
