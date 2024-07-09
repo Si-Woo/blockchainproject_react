@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/blockchainproject_react/static/js/main.7289cfe1.js",
+    "main.js": "/blockchainproject_react/static/js/main.e8d5f3b7.js",
     "static/js/453.eba8ea93.chunk.js": "/blockchainproject_react/static/js/453.eba8ea93.chunk.js",
     "static/media/web3.gif": "/blockchainproject_react/static/media/web3.a825e7af408b3456b13d.gif",
     "static/media/mobile1.gif": "/blockchainproject_react/static/media/mobile1.6578d39a38e051f782fd.gif",
@@ -13,10 +13,10 @@
     "static/media/shu.png": "/blockchainproject_react/static/media/shu.b2ecf1c14c10770d2094.png",
     "static/media/zkdltid.jpg": "/blockchainproject_react/static/media/zkdltid.455793a20beebb6abe28.jpg",
     "index.html": "/blockchainproject_react/index.html",
-    "main.7289cfe1.js.map": "/blockchainproject_react/static/js/main.7289cfe1.js.map",
+    "main.e8d5f3b7.js.map": "/blockchainproject_react/static/js/main.e8d5f3b7.js.map",
     "453.eba8ea93.chunk.js.map": "/blockchainproject_react/static/js/453.eba8ea93.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.7289cfe1.js"
+    "static/js/main.e8d5f3b7.js"
   ]
 }
