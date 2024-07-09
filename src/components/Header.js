@@ -68,6 +68,10 @@ const Header = () => {
           icon={<HamburgerIcon color='#c8d9df' />}
           display={{ base: 'flex', md: 'none' }}
           onClick={onOpen}
+          _hover={{
+            bg: "#2a3645", // 마우스 오버 시 배경색
+            borderColor: "#f08050", // 마우스 오버 시 테두리 색
+          }}
         />
       </Flex>
 
@@ -79,6 +83,13 @@ const Header = () => {
               <Image src={require("../images/logo.png")} alt="Drawer Icon" width={200} marginLeft={3} />
             </Flex>
             <Box bg="#ec6437" height="3px" width="100%" />
+            <Flex justify="end" fontSize={15} marginRight={2}>
+              {
+                i18n.language === 'en' ?
+                  (<button onClick={() => changeLanguage('kr')} style={{ color: 'black' }}>{t('한국어')}</button>) :
+                  (<button onClick={() => changeLanguage('en')} style={{ color: 'black' }}>{t('english')}</button>)
+              }
+            </Flex>
             <DrawerBody>
               <Link color="black" as={RouterLink} to="/" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
                 {t("홈")}
