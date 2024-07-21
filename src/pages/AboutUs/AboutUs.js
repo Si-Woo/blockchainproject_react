@@ -35,14 +35,14 @@ const AboutUs = () => {
             <Text fontSize={22} color="white" mb={10} marginLeft={10} marginRight={10} textAlign="start">
                 {t("저희 프로젝트에 관심을 가져주셔서 감사합니다. 더 자세한 정보나 협업 문의는 아래 연락처로 언제든지 연락해 주세요.")}
             </Text>
-            <HStack marginLeft={16} wrap="wrap">
+            <HStack marginLeft={12} wrap="wrap">
                 <Text fontSize={22} fontWeight="bold" color="white" textAlign="start">
                     ·
                 </Text>
                 <Text fontSize={22} color="white" textAlign="start">
                     {t("이메일") + ":"}
                 </Text>
-                <Text fontSize={22} color="#ec6437" mb={3} marginRight={12} textAlign="start">
+                <Text fontSize={22} color="#ec6437" marginRight={10} textAlign="start">
                     {t("contact@blockchainproject.ai")}
                 </Text>
             </HStack>
