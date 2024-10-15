@@ -58,30 +58,28 @@ const DropDownMenu2 = ({ mainmenu, submenulist }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box onMouseEnter={onOpen} onMouseLeave={onClose}>
-      <Link as={RouterLink} to={mainmenu.link}>{mainmenu.name}</Link>
-      <Collapse in={isOpen} animateOpacity>
-        <Box
-          display={isOpen ? 'block' : 'none'}
-          position="absolute"
-          transform="translateX(-25%)"
-          background="blue.800"
-          zIndex="1000"
-        >
-          {submenulist.map((submenu) => (
-            <Link
-              as={RouterLink}
-              key={submenu.name}
-              _hover={{ bg: 'gray.500' }}
-              to={submenu.link}
-              display="block"
-              py={2}
-              px={4}
-            >
-              {submenu.name}
-            </Link>
-          ))}
-        </Box>
-      </Collapse>
+      <Link as={RouterLink}  to={mainmenu.link}>{mainmenu.name}</Link>
+      <Box
+        display={isOpen ? 'block' : 'none'}
+        position="absolute"
+        transform="translateX(-25%)"
+        background="blue.800"
+        zIndex="1000"
+      >
+        {submenulist.map((submenu) => (
+          <Link
+            as={RouterLink} 
+            key={submenu.name}
+            _hover={{ bg: 'gray.500' }}
+            to={submenu.link}
+            display="block"
+            py={2}
+            px={4}
+          >
+            {submenu.name}
+          </Link>
+        ))}
+      </Box>
     </Box>
   );
 };
