@@ -5,6 +5,8 @@ import { Box, Text, Image } from '@chakra-ui/react';
 // import { ColorModeSwitcher } from '../../components/ColorModeSwitcher';
 import { useTranslation } from 'react-i18next';
 
+import svgLogo from '../../images/white.svg';
+
 const Home = () => {
   const { t } = useTranslation();
 
@@ -19,6 +21,13 @@ const Home = () => {
   return (
 
     <Box w="100%" maxW="container.xl" mx="auto" textAlign="center">
+      <Image
+        src = {svgLogo}
+        alt = "logo"
+        height={100}
+        mx="auto"
+        objectFit="contain"
+      />
       <Box marginLeft={10} marginRight={10}>
         <Image
           src={require("../../images/logo.png")}

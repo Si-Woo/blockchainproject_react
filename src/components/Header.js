@@ -61,6 +61,7 @@ const DropDownMenu2 = ({ mainmenu, submenulist }) => {
       <Box
         display={isOpen ? 'block' : 'none'}
         position="absolute"
+        transform="translateX(-25%)"
         background="blue.800"
         zIndex="1000"
       >
