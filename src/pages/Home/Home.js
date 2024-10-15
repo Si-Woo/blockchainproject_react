@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Text, Image } from '@chakra-ui/react';
+import { Box, Text, Image, HStack } from '@chakra-ui/react';
 // import { CustomButtonRedHover, CustomButtonOutline } from '../../components/CustomeButton';
 
 // import { ColorModeSwitcher } from '../../components/ColorModeSwitcher';
@@ -21,13 +21,6 @@ const Home = () => {
   return (
 
     <Box w="100%" maxW="container.xl" mx="auto" textAlign="center">
-      <Image
-        src = {svgLogo}
-        alt = "logo"
-        height={100}
-        mx="auto"
-        objectFit="contain"
-      />
       <Box marginLeft={10} marginRight={10}>
         <Image
           src={require("../../images/logo.png")}
@@ -43,11 +36,28 @@ const Home = () => {
         <br />
         <p>{t("BlockChain Project의 첫 번째 프로젝트인 ChainTalk은 블록체인 기술을 활용하여 기존 중앙 DB에 저장되던 모든 데이터를 사용자가 직접 소유하고 관리할 수 있도록 합니다. 이를 통해 데이터의 주권을 사용자에게 돌려주고, 더 높은 수준의 프라이버시와 보안을 제공합니다.")}</p>
       </Text>
+      <Box w="100%" display="flex" justifyContent="center" alignItems="center" mt={10}>
+        <HStack spacing={10} w="100%" maxW="500px" justifyContent="space-between" px={4}>
+          <a href='https://play.google.com/store/apps/details?id=com.planetchain.chaintalk&pcampaignid=web_share' target='_blank' rel='noopener noreferrer'>
+            <Image
+              src={require("../../images/google_kr.png")}
+              alt="image2"
+              height={100}
+              objectFit="contain"
+            />
+          </a>
+          <a href='https://apps.apple.com/kr/app/chaintalk/id6505109545' target='_blank' rel='noopener noreferrer'>
+            <Image
+              src={svgLogo}
+              alt="logo"
+              height={70}
+              objectFit="contain"
+            />
+          </a>
+        </HStack>
+      </Box>
     </Box>
   );
 };
 
 export default Home;
-
-
-

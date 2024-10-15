@@ -18,6 +18,7 @@ import {
   PopoverContent,
   PopoverBody,
   GridItem,
+  Collapse,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
@@ -35,17 +36,17 @@ const DropDownMenu = ({ mainmenu, submenulist }) => {
         </PopoverTrigger>
         <PopoverContent w="100vw" borderRadius="none" border="none" top={-1} bg="teal.500">
           <PopoverBody justify={'center'} align={'center'}>
-              {
-                submenulist.map((item) => {
-                  return (
-                    <GridItem key={item.id}>
-                      <Link as={RouterLink} to={item.link} key={item.name}>
-                        {item.name}
-                      </Link>
-                    </GridItem>
-                  )
-                })
-              }
+            {
+              submenulist.map((item) => {
+                return (
+                  <GridItem key={item.id}>
+                    <Link as={RouterLink} to={item.link} key={item.name}>
+                      {item.name}
+                    </Link>
+                  </GridItem>
+                )
+              })
+            }
           </PopoverBody>
         </PopoverContent>
       </Popover>
@@ -57,28 +58,30 @@ const DropDownMenu2 = ({ mainmenu, submenulist }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box onMouseEnter={onOpen} onMouseLeave={onClose}>
-      <Link as={RouterLink}  to={mainmenu.link}>{mainmenu.name}</Link>
-      <Box
-        display={isOpen ? 'block' : 'none'}
-        position="absolute"
-        transform="translateX(-25%)"
-        background="blue.800"
-        zIndex="1000"
-      >
-        {submenulist.map((submenu) => (
-          <Link
-            as={RouterLink} 
-            key={submenu.name}
-            _hover={{ bg: 'gray.500' }}
-            to={submenu.link}
-            display="block"
-            py={2}
-            px={4}
-          >
-            {submenu.name}
-          </Link>
-        ))}
-      </Box>
+      <Link as={RouterLink} to={mainmenu.link}>{mainmenu.name}</Link>
+      <Collapse in={isOpen} animateOpacity>
+        <Box
+          display={isOpen ? 'block' : 'none'}
+          position="absolute"
+          transform="translateX(-25%)"
+          background="blue.800"
+          zIndex="1000"
+        >
+          {submenulist.map((submenu) => (
+            <Link
+              as={RouterLink}
+              key={submenu.name}
+              _hover={{ bg: 'gray.500' }}
+              to={submenu.link}
+              display="block"
+              py={2}
+              px={4}
+            >
+              {submenu.name}
+            </Link>
+          ))}
+        </Box>
+      </Collapse>
     </Box>
   );
 };
@@ -108,11 +111,7 @@ const Header = () => {
               <Link as={RouterLink} to="/about_us" mx={2}>
                 {t('소개')}
               </Link>
-              <Link as={RouterLink} to="/product" mx={2}>
-                {t('제품')}
-              </Link>
-              <DropDownMenu mainmenu={{ name: t('제품2'), link: '/product' }} submenulist={[{ name: t('Chaintalk'), link: '/chaintalk' }]} />
-              <DropDownMenu2 mainmenu={{ name: t('제품3'), link: '/product' }} submenulist={[{ name: t('Chaintalk'), link: '/chaintalk' }]} />
+              <DropDownMenu2 mainmenu={{ name: t('제품'), link: '/product' }} submenulist={[{ name: t('Chaintalk'), link: '/chaintalk' }]} />
               <Link as={RouterLink} to="/members" mx={2}>
                 {t('멤버')}
               </Link>
