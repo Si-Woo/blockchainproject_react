@@ -1,15 +1,15 @@
-import React from 'react';
-import { Box, Text, Image } from '@chakra-ui/react';
+// import React from 'react';
+// import { Box, Text, Image } from '@chakra-ui/react';
 
-import { useTranslation } from 'react-i18next';
+// import { useTranslation } from 'react-i18next';
 
-const Product = () => {
-    const { t } = useTranslation();
+// const Product = () => {
+//     const { t } = useTranslation();
 
-    // return (
+//     // return (
 
         
-    // );
-};
+//     // );
+// };
 
-export default Product;
+// export default Product;
