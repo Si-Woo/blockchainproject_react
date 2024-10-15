@@ -17,7 +17,8 @@ import NotFound from './pages/NotFound';
 
 function RouterContainer() {
   return (
-    <Router basename="/blockchainproject_react">
+    // <Router basename="/blockchainproject_react"> // github repogitory 주소
+    <Router basename="/"> // 지정 도메인 배포
       <Box display="flex" flexDirection="column" minHeight="100vh">
         <Header />
         <Box as="main" flex="1" py={8}>
