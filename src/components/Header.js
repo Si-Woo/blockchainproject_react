@@ -28,36 +28,6 @@ const DropDownMenu = ({ mainmenu, submenulist }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box onMouseEnter={onOpen} onMouseLeave={onClose}>
-      <Popover isOpen={isOpen}>
-        <PopoverTrigger>
-          <Link as={RouterLink} to={mainmenu.link}>
-            {mainmenu.name}
-          </Link>
-        </PopoverTrigger>
-        <PopoverContent w="100vw" borderRadius="none" border="none" top={-1} bg="teal.500">
-          <PopoverBody justify={'center'} align={'center'}>
-            {
-              submenulist.map((item) => {
-                return (
-                  <GridItem key={item.id}>
-                    <Link as={RouterLink} to={item.link} key={item.name}>
-                      {item.name}
-                    </Link>
-                  </GridItem>
-                )
-              })
-            }
-          </PopoverBody>
-        </PopoverContent>
-      </Popover>
-    </Box>
-  );
-};
-
-const DropDownMenu2 = ({ mainmenu, submenulist }) => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  return (
-    <Box onMouseEnter={onOpen} onMouseLeave={onClose}>
       <Link as={RouterLink}  to={mainmenu.link}>{mainmenu.name}</Link>
       <Collapse in={isOpen} animateOpacity>
       <Box
@@ -111,7 +81,7 @@ const Header = () => {
               <Link as={RouterLink} to="/about_us" mx={2}>
                 {t('소개')}
               </Link>
-              <DropDownMenu2 mainmenu={{ name: t('제품'), link: '/product' }} submenulist={[{ name: t('Chaintalk'), link: '/chaintalk' }]} />
+              {/* <DropDownMenu mainmenu={{ name: t('제품'), link: '/product' }} submenulist={[{ name: t('Chaintalk'), link: '/chaintalk' }]} /> */}
               <Link as={RouterLink} to="/members" mx={2}>
                 {t('멤버')}
               </Link>
@@ -165,9 +135,9 @@ const Header = () => {
               <Link color="black" as={RouterLink} to="/about_us" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
                 {t("소개")}
               </Link>
-              <Link color="black" as={RouterLink} to="/product" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
+              {/* <Link color="black" as={RouterLink} to="/product" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
                 {t("제품")}
-              </Link>
+              </Link> */}
               <Link color="black" as={RouterLink} to="/members" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
                 {t("멤버")}
               </Link>
