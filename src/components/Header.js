@@ -18,7 +18,7 @@ import {
   // PopoverContent,
   // PopoverBody,
   // GridItem,
-  Collapse,
+  // Collapse,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
