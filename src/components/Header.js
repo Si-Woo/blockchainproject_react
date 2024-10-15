@@ -59,6 +59,7 @@ const DropDownMenu2 = ({ mainmenu, submenulist }) => {
   return (
     <Box onMouseEnter={onOpen} onMouseLeave={onClose}>
       <Link as={RouterLink}  to={mainmenu.link}>{mainmenu.name}</Link>
+      <Collapse in={isOpen} animateOpacity>
       <Box
         display={isOpen ? 'block' : 'none'}
         position="absolute"
@@ -80,6 +81,7 @@ const DropDownMenu2 = ({ mainmenu, submenulist }) => {
           </Link>
         ))}
       </Box>
+      </Collapse>
     </Box>
   );
 };
