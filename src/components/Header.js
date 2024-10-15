@@ -18,6 +18,7 @@ import {
   PopoverContent,
   PopoverBody,
   GridItem,
+  Collapse,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
@@ -58,8 +59,8 @@ const DropDownMenu2 = ({ mainmenu, submenulist }) => {
   return (
     <Box onMouseEnter={onOpen} onMouseLeave={onClose}>
       <Link as={RouterLink}  to={mainmenu.link}>{mainmenu.name}</Link>
+      <Collapse in={isOpen} animateOpacity>
       <Box
-        display={isOpen ? 'block' : 'none'}
         position="absolute"
         transform="translateX(-25%)"
         background="blue.800"
@@ -79,6 +80,7 @@ const DropDownMenu2 = ({ mainmenu, submenulist }) => {
           </Link>
         ))}
       </Box>
+      </Collapse>
     </Box>
   );
 };
