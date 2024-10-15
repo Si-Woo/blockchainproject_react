@@ -44,6 +44,9 @@ const Header = () => {
               <Link as={RouterLink} to="/about_us" mx={2}>
                 {t('소개')}
               </Link>
+              <Link as={RouterLink} to="/product" mx={2}>
+                {t('제품')}
+              </Link>
               <Link as={RouterLink} to="/members" mx={2}>
                 {t('멤버')}
               </Link>
@@ -96,6 +99,9 @@ const Header = () => {
               </Link>
               <Link color="black" as={RouterLink} to="/about_us" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
                 {t("소개")}
+              </Link>
+              <Link color="black" as={RouterLink} to="/product" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
+                {t("제품")}
               </Link>
               <Link color="black" as={RouterLink} to="/members" fontSize={18} onClick={onClose} display="block" my={2} mt={5}>
                 {t("멤버")}
