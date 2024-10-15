@@ -17,7 +17,6 @@ import {
   PopoverTrigger,
   PopoverContent,
   PopoverBody,
-  SimpleGrid,
   GridItem,
 } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
@@ -35,8 +34,7 @@ const DropDownMenu = ({ mainmenu, submenulist }) => {
           </Link>
         </PopoverTrigger>
         <PopoverContent w="100vw" borderRadius="none" border="none" top={-1} bg="teal.500">
-          <PopoverBody>
-            <SimpleGrid columns={4} spacing={4}>
+          <PopoverBody justify={'center'} align={'center'}>
               {
                 submenulist.map((item) => {
                   return (
@@ -48,10 +46,38 @@ const DropDownMenu = ({ mainmenu, submenulist }) => {
                   )
                 })
               }
-            </SimpleGrid>
           </PopoverBody>
         </PopoverContent>
       </Popover>
+    </Box>
+  );
+};
+
+const DropDownMenu2 = ({ mainmenu, submenulist }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  return (
+    <Box onMouseEnter={onOpen} onMouseLeave={onClose}>
+      <Link as={RouterLink}  to={mainmenu.link}>{mainmenu.name}</Link>
+      <Box
+        display={isOpen ? 'block' : 'none'}
+        position="absolute"
+        background="blue.800"
+        zIndex="1000"
+      >
+        {submenulist.map((submenu) => (
+          <Link
+            as={RouterLink} 
+            key={submenu.name}
+            _hover={{ bg: 'gray.500' }}
+            to={submenu.link}
+            display="block"
+            py={2}
+            px={4}
+          >
+            {submenu.name}
+          </Link>
+        ))}
+      </Box>
     </Box>
   );
 };
@@ -84,7 +110,8 @@ const Header = () => {
               <Link as={RouterLink} to="/product" mx={2}>
                 {t('제품')}
               </Link>
-              <DropDownMenu mainmenu={{ name: t('제품'), link: '/product' }} submenulist={[{ name: t('Chaintalk'), link: '/chaintalk' }]} />
+              <DropDownMenu mainmenu={{ name: t('제품2'), link: '/product' }} submenulist={[{ name: t('Chaintalk'), link: '/chaintalk' }]} />
+              <DropDownMenu2 mainmenu={{ name: t('제품3'), link: '/product' }} submenulist={[{ name: t('Chaintalk'), link: '/chaintalk' }]} />
               <Link as={RouterLink} to="/members" mx={2}>
                 {t('멤버')}
               </Link>
