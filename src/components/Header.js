@@ -13,7 +13,7 @@ import {
   Image,
   HStack,
   VStack,
-  Text,
+  // Text,
   // Popover,
   // PopoverTrigger,
   // PopoverContent,

@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box, Text, Image, HStack } from '@chakra-ui/react';
+import { Box, Text, Image } from '@chakra-ui/react';
 // import { CustomButtonRedHover, CustomButtonOutline } from '../../components/CustomeButton';
 
 // import { ColorModeSwitcher } from '../../components/ColorModeSwitcher';
 import { useTranslation } from 'react-i18next';
 
-import svgLogo from '../../images/white.svg';
+// import svgLogo from '../../images/white.svg';
 
 const Home = () => {
   const { t } = useTranslation();
