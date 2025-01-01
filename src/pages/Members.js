@@ -70,7 +70,6 @@ const Members = () => {
                 </PopoverBody>
               </PopoverContent>
             </Popover>
-
           </Box>
         </HStack>
         {/* 두 번째 이미지 오른쪽 정렬 */}
@@ -105,7 +104,6 @@ const Members = () => {
                 </PopoverBody>
               </PopoverContent>
             </Popover>
-
           </Box>
         </HStack>
         {/* button example */}

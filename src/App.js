@@ -10,10 +10,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home/Home';
 import AboutUs from './pages/AboutUs/AboutUs';
-import Product from './pages/Product/Product';
 import Members from './pages/Members';
 import Donation from './pages/Donation/Donation';
 import NotFound from './pages/NotFound';
+import ChainTalk from './pages/Product/chain_talk';
+import Gray from './pages/Product/gray';
 
 function RouterContainer() {
   return (
@@ -26,9 +27,10 @@ function RouterContainer() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about_us" element={<AboutUs />} />
-            <Route path="/product" element={<Product />} />
             <Route path="/members" element={<Members />} />
             <Route path="/donation" element={<Donation />} />
+            <Route path="/chaintalk" element={<ChainTalk />} />
+            <Route path="/gray" element={<Gray />} />
             <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
           </Routes>
         </Box>
