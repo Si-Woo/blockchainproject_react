@@ -151,21 +151,15 @@ const Header = () => {
               <Link color="black" as={RouterLink} to="/about_us" fontSize={18} onClick={handleClose} display="block" my={2} mt={5}>
                 {t("소개")}
               </Link>
-              <Link
-                color="black"
-                as="button"
-                fontSize={18}
-                onClick={toggleDropdown}
-                display="block"
-                my={2}
-                mt={5}
-              >
-                {t("앱")}{" "}
-                {dropdownOpen ? (
-                  <ChevronUpIcon boxSize={5} />
-                ) : (
-                  <ChevronDownIcon boxSize={5} />
-                )}
+              <Link color="black" as="button" fontSize={18} onClick={toggleDropdown} my={2} mt={5} width="100%">
+                <Flex justifyContent="space-between" alignItems="center" width="100%">
+                  {t("앱")}
+                  {dropdownOpen ? (
+                    <ChevronUpIcon boxSize={5} />
+                  ) : (
+                    <ChevronDownIcon boxSize={5} />
+                  )}
+                </Flex>
               </Link>
               <Collapse in={dropdownOpen} animateOpacity>
                 <VStack align="start" spacing={2} pl={4}>
