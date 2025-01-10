@@ -97,7 +97,7 @@ const Header = () => {
               <Link as={RouterLink} to="/about_us" mx={2}>
                 {t('소개')}
               </Link>
-              <DropDownMenu mainmenu={{ name: t('앱') }} submenulist={[{ name: t('Chaintalk'), link: '/chaintalk' }, { name: t("Gray"), link: '/gray' }]} />
+              <DropDownMenu mainmenu={{ name: t('앱') }} submenulist={[{ name: t('ChainTalk'), link: '/chaintalk' }, { name: t("Gray"), link: '/gray' }]} />
               <Link as={RouterLink} to="/members" mx={2}>
                 {t('멤버')}
               </Link>
